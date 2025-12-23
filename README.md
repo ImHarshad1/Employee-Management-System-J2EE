@@ -5,43 +5,40 @@
 ![Tomcat](https://img.shields.io/badge/Tomcat-Server-yellow)
 
 👨‍💼 Employee Management System (J2EE)
-A Java EE–based Employee Management System designed to streamline employee data handling, CRUD operations, and organizational workflows.
-This project demonstrates layered architecture, clean code practices, and enterprise‑grade features for managing employees efficiently.
+A JSP/Servlet-based Employee Management System using the DAO pattern and HTML/CSS forms. It supports employee registration, login with registered credentials, and a post-login dashboard showing complete employee details.
 
 📐 Architecture
-The application follows a layered architecture:
+Forms (JSP/HTML): User-facing pages for registration and login
 
-Controller Layer → Handles user requests and forwards them to services
+Servlets: Handle form submissions, session management, and navigation
 
-Entity Layer → Maps employee data to database tables
+DAO Layer: Encapsulates database operations for employees via JDBC
 
-Repository/DAO Layer → Performs database operations using JDBC/JPA
-
-Service Layer → Implements business logic for employee management
+Model (POJOs): Simple Java objects representing employee data
 
 ⚙️ Tech Stack
 Language: Java (J2EE)
 
-Frameworks: Servlet, JSP, JDBC
+Web: JSP, Servlets, HTML/CSS
 
-Database: MySQL / PostgreSQL (depending on setup)
+Persistence: JDBC (DAO pattern)
+
+Server: Apache Tomcat
+
+Database: MySQL or PostgreSQL
 
 Tools: Maven (dependency management), Eclipse IDE
 
-Utilities: JSTL, HTML/CSS for UI
-
 ✨ Features
-👤 Employee registration and profile management
+Registration: Create a new employee profile via form
 
-📋 CRUD operations (Create, Read, Update, Delete)
+Login: Authenticate using registered credentials
 
-🗂️ Department and role assignment
+Dashboard: Display full employee details after login
 
-🔍 Search and filter employees
+Session management: Maintain authenticated user state
 
-📊 Employee list with pagination and sorting
-
-🔒 Secure login and session management
+Validation: Basic form validations on inputs
 
 🚀 Getting Started
 Clone the repository:
@@ -57,15 +54,15 @@ Build and deploy on Apache Tomcat server.
 Access the application at: http://localhost:8080/EmployeeManagementSystem
 
 🧪 Testing
-APIs and JSP pages tested using browser and Postman
+JSP pages tested using browser, verify session and details page 
 
-Database managed with MySQL/PostgreSQL
+Database checks: Confirm rows created/updated in the employees table
 
 📌 Highlights
-Clean, modular code with DAO pattern
+DAO pattern: Clean separation of DB access from presentation
 
-MVC architecture for separation of concerns
+Simple, usable UI: Form-driven JSP pages
 
-Reusable components for scalability
+Session-aware flows: Protect dashboard behind login
 
-Built with maintainability and enterprise readiness in mind
+Easily deployable: Works on Tomcat with minimal setup
