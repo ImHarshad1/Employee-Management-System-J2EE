@@ -41,14 +41,14 @@ Tools: Maven (dependency management), Eclipse IDE
 ### 🔁 Application Architecture Flow
 ```text
 +-------------------+   +-------------------+   +-------------------+   +------------------+
-| Client (Browser)  | → |      Servlets     | → |       DAO Layer   | → |     Database     |
-|   (JSP Forms)     |   | (Session & Logic) |   |   (JDBC Queries)  |   |   MySQL/Postgres |
+|  Client (Browser) | → |      Servlets     | → |      DAO Layer    | → |     Database     |
+|    (JSP Forms)    |   | (Session & Logic) |   |   (JDBC Queries)  |   |   MySQL/Postgres |
 +-------------------+   +-------------------+   +-------------------+   +------------------+
 
-                                     +----------------------------+
-                                     |          Model             |
-                                     |   (Employee POJOs/Data)    |
-                                     +----------------------------+
+                                +----------------------------+
+                                |           Model            |
+                                |   (Employee POJOs/Data)    |
+                                +----------------------------+
 ```
 ---
 
